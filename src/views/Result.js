@@ -70,6 +70,9 @@ export default function Main(props) {
                 {question.options.map((opt, opt_index) => (
                   <FormControlLabel
                     className="test-radio-option"
+                    style={{
+                      background: (opt.correct ? "#b2ffb2" : (answers[q_index] == opt_index ? "#ff8181" : "transparent"))
+                    }}
                     key={opt_index}
                     value={opt_index}
                     control={<Radio />}

@@ -9,6 +9,8 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
+  ImageList,
+  ImageListItem,
   LinearProgress,
   Radio,
   RadioGroup,
@@ -61,6 +63,7 @@ export default function Test(props) {
   });
 
   const question = props.questions[state.currentQuestionID];
+  const images = question.attachments;
 
   return (
     <Container className="view-container" maxWidth="sm">
@@ -73,6 +76,19 @@ export default function Test(props) {
       <Divider />
       <Box marginTop={3} padding={1}>
         <Typography variant="h5">{question.question}</Typography>
+        {images &&
+          <ImageList sx={{ width: '100%' }} cols={images.length}>
+            {images.map((image) => (
+              <ImageListItem key={image}>
+                <img
+                  src={`images/${image}`}
+                  srcSet={`images/${image}`}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        }
       </Box>
       <Box padding={1}>
         <FormControl>

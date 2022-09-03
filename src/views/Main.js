@@ -14,7 +14,8 @@ export default function Main(props) {
 
   const OnStart = () => {
     // Choosing 15 random questions
-    const selectedQuestions = questions.slice().sort(() => Math.random() - 0.5).slice(0, 2);
+    // const selectedQuestions = questions.slice().sort(() => Math.random() - 0.5).slice(0, 2);
+    const selectedQuestions = questions.slice();
     
     const params = ({
       questions: selectedQuestions
