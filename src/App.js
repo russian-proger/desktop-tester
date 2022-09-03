@@ -20,7 +20,8 @@ const Views = [
 function App() {
     const [settings, setSettings] = React.useState({
         fontSize: '16pt', 
-    })
+    });
+
     const [view, setView] = React.useState({
         name: "main",
         props: {}

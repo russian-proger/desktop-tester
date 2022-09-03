@@ -33,11 +33,10 @@ export default function Test(props) {
   const OnSubmit = () => {
     const newAnswers = answers.slice();
     newAnswers[state.currentQuestionID] = state.currentAnswerID;
-    setAnswers(newAnswers);
     
     if (state.currentQuestionID == props.questions.length - 1) {
       props.onSetView("result", {
-        answers,
+        answers: newAnswers,
         questions: props.questions,
       });
     } else {
@@ -46,6 +45,7 @@ export default function Test(props) {
         currentAnswerID: null,
         currentQuestionID: state.currentQuestionID + 1
       });
+      setAnswers(newAnswers);
     }
   }
 
