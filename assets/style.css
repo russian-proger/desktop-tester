@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    src: url("./fonts/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("./fonts/Roboto/Roboto-Regular.ttf");
+}
+
+html {
+    font-family: Roboto;
+    background: #eee;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.view-container {
+    background: white;
+    min-height: 100%;
+    position: relative;
+    padding: 40px;
+}
+
+.test-action-group {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 25px;
+}
+
+.test-action-group .MuiContainer-root {
+    background: white;
+}
+
+.test-radio-option {
+    margin: 7px 0;
+}
