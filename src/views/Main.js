@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Box,
   Button,
   Container,
   Divider,
@@ -9,14 +10,15 @@ import {
 } from '@mui/material';
 
 import questions from '../../assets/questions.json';
+import Background from '../components/Background';
 
 export default function Main(props) {
 
   const OnStart = () => {
     // Choosing 15 random questions
-    // const selectedQuestions = questions.slice().sort(() => Math.random() - 0.5).slice(0, 2);
-    const selectedQuestions = questions.slice();
-    
+    const selectedQuestions = questions.slice().sort(() => Math.random() - 0.5).slice(0, 15);
+    // const selectedQuestions = questions.slice();
+
     const params = ({
       questions: selectedQuestions
     });
@@ -26,12 +28,14 @@ export default function Main(props) {
 
   return (
     <Container className="view-container" maxWidth="sm">
-      <Typography marginTop={0} marginBottom={7} variant="h4" textAlign="center"> Тестирование по теме охрана труда</Typography>
-      <Stack spacing={1}>
-        <Divider />
-        <Button variant="contained" size="large" onClick={OnStart}>Начать тест</Button>
-        <Button variant="contained" size="large" onClick={() => window.close()}>Выйти</Button>
-      </Stack>
+      {/* <Background /> */}
+      <Typography marginTop={5} marginBottom={10} variant="h4" textAlign="center"> Тестирование по теме охрана труда</Typography>
+      <Box >
+        <Stack spacing={1}>
+          <Button variant="contained" size="large" onClick={OnStart}>Начать тест</Button>
+          <Button variant="contained" size="large" onClick={() => window.close()}>Выйти</Button>
+        </Stack>
+      </Box>
     </Container>
   )
 }
