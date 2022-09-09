@@ -21,6 +21,7 @@
     "@mui/material": "^5.10.4",
     "babel-loader": "^8.2.5",
     "electron": "^20.1.0",
+    "electron-wix-msi": "^4.0.0",
     "json-loader": "^0.5.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
