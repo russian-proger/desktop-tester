@@ -1,3 +1,4 @@
+const path = require('path');
 const electron = require('electron');
 
 const createWindow = () => {
@@ -5,7 +6,8 @@ const createWindow = () => {
         width: 800,
         height: 800,
         minWidth: 500,
-        minHeight: 300
+        minHeight: 300,
+        icon: "icon.png"
     });
 
     win.menuBarVisible = false;

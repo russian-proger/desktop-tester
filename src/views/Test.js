@@ -40,6 +40,7 @@ export default function Test(props) {
       props.onSetView("result", {
         answers: newAnswers,
         questions: props.questions,
+        person: props.person
       });
     } else {
       setState({

@@ -52,6 +52,7 @@ function Triangle(ctx) {
 const figures = [Rectangle, Circle];
 
 export default function Background() {
+    /** @type {React.Ref<HTMLCanvasElement>} */
     const canvasRef = React.useRef(null);
 
     React.useLayoutEffect(() => {
@@ -66,8 +67,8 @@ export default function Background() {
         ctx.lineWidth = 5;
 
         const updateSizes = () => {
-            cnv.width = window.innerWidth;
-            cnv.height = window.innerHeight;
+            cnv.width = canvasRef.current.parentElement.clientWidth;
+            cnv.height = canvasRef.current.parentElement.clientHeight;
         }
 
         const render = () => {
